@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>Popo</title>
+    <style>
+      html {
+        overflow: hidden;
+      }
+      body {
+        margin: 0;
+        background: #97d9e7;
+        font-family: sans-serif;
+        padding-top: 200px;
+        overflow: hidden;
+      }
+      #popo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-height: 100%;
+        max-width: 50%;
+        pointer-events: none;
+      }
+      h1, h2 {
+        text-align: center;
+      }
+      #ca-container {
+        margin: 0 auto;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+
+      #ca-container a {
+        position: relative;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      #ca-container a:hover {
+        text-decoration: underline;
+      }
+
+      #copied {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        color: green;
+        font-size: 12px;
+      }
+
+      h2 {
+        font-weight: normal;
+      }
+      #links {
+        width: 50%;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      #links a {
+        color: black;
+        padding: 5px;
+        margin: 5px;
+        text-decoration: none;
+      }
+
+      #links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.gif">
+    <script>
+      function copyCA() {
+        let ca = document.querySelector('#ca');
+        navigator.clipboard.writeText(ca.innerHTML);
+        let copied = document.querySelector('#copied');
+        copied.innerHTML = 'copied'
+      };
+    </script>
+  </head>
+  <body>
+    <h1>$popo</h1>
+
+    <h2>thinking. waiting.</h2>
+
+    <div id="ca-container">
+      <a href="#ca" onclick="copyCA()"><span id="ca">B1ar3peZhYxhverKbuDxgcWvtXucJhdeM7Qucrt92wS5</span>
+      <span id="copied"></span>
+      </a>
+    </div>
+
+    <div id="links">
+      <a href="https://x.com/pensivepopo">Twitter</a>
+      <a href="https://solscan.io/token/B1ar3peZhYxhverKbuDxgcWvtXucJhdeM7Qucrt92wS5">Solscan</a>
+      <a href="https://dexscreener.com/solana/BEwTdnb34L8LCeYa2fF1CgpH3gJWFDgjcQYqZA94Uat1">DEX Screener</a>
+      <a href="https://birdeye.so/token/B1ar3peZhYxhverKbuDxgcWvtXucJhdeM7Qucrt92wS5?chain=solana">Birdeye</a>
+      <a href="popo.png">Whitepaper</a>
+    </div>
+
+
+    <img id="popo" src="popo.png" />
+
+  </body>
+</html>
+
+
+    <!--
+      made with
+      popo technology
+    -->
+
+
+
+
+
+
+
+
