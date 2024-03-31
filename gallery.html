@@ -12,17 +12,20 @@
         padding-top: 200px;
         overflow: hidden;
       }
-      #popo {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        max-height: 100%;
-        max-width: 50%;
-        pointer-events: none;
-      }
       h1, h2 {
         text-align: center;
       }
+
+      a#home {
+        color: black;
+        text-decoration: none;
+      }
+
+      a#home:hover {
+        color: black;
+        text-decoration: underline;
+      }
+
       #ca-container {
         margin: 0 auto;
         display: inline-block;
@@ -73,7 +76,10 @@
       #gallery {
         display: flex;
         align-items: center;
-        flex-direction: column;
+      }
+
+      #gallery a {
+        margin: 10px;
       }
     </style>
     <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
@@ -91,7 +97,7 @@
     </script>
   </head>
   <body>
-    <h1>$popo</h1>
+    <a id="home" href="/"><h1>$popo</h1></a>
 
     <h2>thinking. waiting.</h2>
 
@@ -110,11 +116,13 @@
       <a href="https://t.co/d8lkLNlLGy">Telegram</a>
       <a href="popo.png">Whitepaper</a>
       <br>
-      <a href="gallery.html">Gallery</a>
+      <a href="/">Home</a>
     </div>
 
-    <img id="popo" src="popo.png" />
-
+    <div id="gallery">
+      <a href="gallery/yuge.png"><img width=150 src="gallery/yuge.png" /></a>
+      <a href="gallery/matrix.png"><img width=150 src="gallery/matrix.png" /></a>
+    </div>
   </body>
 </html>
 
@@ -123,4 +131,12 @@
       made with
       popo technology
     -->
+
+
+
+
+
+
+
+
 
