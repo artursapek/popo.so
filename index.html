@@ -7,7 +7,7 @@
       }
       body {
         margin: 0;
-        background: #97d9e7;
+        background: #a7ddf0;
         font-family: sans-serif;
         padding-top: 200px;
         overflow: hidden;
@@ -16,9 +16,27 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        max-height: 100%;
-        max-width: 50%;
+        width: 50%;
+        height: 100%;
         pointer-events: none;
+        mix-blend-mode: darken;
+
+        width: 50vw;
+        height: 50vw;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+      }
+
+      #eyes {
+        background: white;
+        position: absolute;
+        right: 0px;
+        left: 0px;
+        bottom: 30vw;
+        height: 10vw;
+        width: 34vw;
+        display: none;
       }
       h1, h2 {
         text-align: center;
@@ -75,6 +93,24 @@
         align-items: center;
         flex-direction: column;
       }
+
+      #buy {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: black;
+        display: inline-block;
+        padding: 10px;
+        border: 4px solid black;
+        background: #6a891c;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 24px;
+      }
+
+      #buy:hover {
+        background: #b17a5a;
+      }
     </style>
     <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
     <link rel="icon" type="image/x-icon" href="favicon.gif">
@@ -93,7 +129,7 @@
   <body>
     <h1>$popo</h1>
 
-    <h2>thinking. waiting.</h2>
+    <h2>patiently waiting</h2>
 
     <div id="ca-container">
       <a href="#ca" onclick="copyCA()"><span id="ca">B1ar3peZhYxhverKbuDxgcWvtXucJhdeM7Qucrt92wS5</span>
@@ -104,16 +140,31 @@
     <div id="links">
       <a href="https://x.com/pensivepopo">Twitter</a>
       <a href="https://solscan.io/token/B1ar3peZhYxhverKbuDxgcWvtXucJhdeM7Qucrt92wS5">Solscan</a>
-      <a href="https://dexscreener.com/solana/BEwTdnb34L8LCeYa2fF1CgpH3gJWFDgjcQYqZA94Uat1">DEX Screener</a>
-      <br>
-      <a href="https://birdeye.so/token/B1ar3peZhYxhverKbuDxgcWvtXucJhdeM7Qucrt92wS5?chain=solana">Birdeye</a>
       <a href="https://t.co/d8lkLNlLGy">Telegram</a>
-      <a href="popo.png">Whitepaper</a>
       <br>
+      <a href="https://dexscreener.com/solana/BEwTdnb34L8LCeYa2fF1CgpH3gJWFDgjcQYqZA94Uat1">DEX Screener</a>
+      <a href="https://birdeye.so/token/B1ar3peZhYxhverKbuDxgcWvtXucJhdeM7Qucrt92wS5?chain=solana">Birdeye</a>
+      <a href="https://jup.ag/swap/SOL-popo_B1ar3peZhYxhverKbuDxgcWvtXucJhdeM7Qucrt92wS5">Jupiter</a>
+      <br>
+      <a href="popo.png">Whitepaper</a>
       <a href="gallery.html">Gallery</a>
     </div>
 
-    <img id="popo" src="popo.png" />
+    <div id="eyes"></div>
+
+    <video id=popo autoplay muted id=popo loadeddata="showEyesBg()">
+      <source src="popo.mp4" type="video/mp4" />
+    </video>
+
+    <a id="buy" href="https://jup.ag/swap/SOL-popo_B1ar3peZhYxhverKbuDxgcWvtXucJhdeM7Qucrt92wS5">
+      procure $popo on Jupiter
+    </a>
+
+    <script>
+      document.querySelector('video#popo').onloadeddata = function() {
+        document.getElementById('eyes').style.display = 'block';
+      }
+    </script>
 
   </body>
 </html>
