@@ -85,6 +85,7 @@
 
       #links a:hover {
         text-decoration: underline;
+        transform: scale(1.2);
       }
 
       #gallery {
@@ -109,6 +110,45 @@
 
       #buy:hover {
         background: #b17a5a;
+      }
+
+      #assets {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        border: 5px solid black;
+        padding: 20px;
+        border-radius: 10px;
+        background: #9cd5e9;
+      }
+
+      #assets p {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      #assets h3 {
+        margin: 0;
+      }
+
+      #assets a {
+        margin: 5px;
+      }
+
+      #assets a:hover img {
+        transform: scale(1.2);
+      }
+
+      #assets img {
+        max-width: 100px;
+        max-height: 100px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        #assets {
+          position: static;
+          margin: 0 10px;
+        }
       }
     </style>
     <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
@@ -158,6 +198,28 @@
     <a id="buy" href="https://jup.ag/swap/SOL-popo_B1ar3peZhYxhverKbuDxgcWvtXucJhdeM7Qucrt92wS5">
       procure $popo on Jupiter
     </a>
+
+    <div id="assets">
+      <h3>Popo Depot</h3>
+
+      <p>Click to download</p>
+
+      <a href="/popo.png">
+        <img src="/popo.png" />
+      </a>
+
+      <a href="/depot/sleep-deprived.png">
+        <img src="/depot/sleep-deprived.png" />
+      </a>
+
+      <a href="/depot/front.png">
+        <img src="/depot/front.png" />
+      </a>
+
+      <a href="/depot/jeet-repellent.png">
+        <img src="/depot/jeet-repellent.png" />
+      </a>
+    </div>
 
     <script>
       document.querySelector('video#popo').onloadeddata = function() {
